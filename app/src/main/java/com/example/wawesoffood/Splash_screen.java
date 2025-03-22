@@ -2,9 +2,7 @@ package com.example.wawesoffood;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class splash_screen extends AppCompatActivity {
+public class Splash_screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,16 +20,15 @@ public class splash_screen extends AppCompatActivity {
         Thread thread = new Thread(){
 
 
-            private Context splash_screen;
+
 
             public void run(){
                 try{
                     sleep(3000);
                 }catch (Exception e){
-
                 }
                 finally {
-                    Intent intent = new Intent(this.splash_screen,MainActivity.class);
+                    Intent intent = new Intent(Splash_screen.this,StartActivity.class);
                     startActivity(intent);
                     finish();
 
